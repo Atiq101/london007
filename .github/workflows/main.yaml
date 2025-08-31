@@ -1,0 +1,6 @@
+name: Mera Pahll pipeline
+on:
+  push:
+    branches: 
+    -  'main'
+    - 'feature/**'
