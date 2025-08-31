@@ -4,3 +4,10 @@ on:
     branches: 
     -  'main'
     - 'feature/**'
+jobs: 
+ terraformInit: 
+   name: Initivaa 
+   runs-on:  dhondu-test
+   steps: 
+      - name:  Dhondhu Rocks!
+        run: echo welcome welcome welcome 
