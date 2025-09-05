@@ -14,4 +14,4 @@ jobs:
 
     steps:
       - name: tare bah rocks par betha ha ya
-        run: echo "Dock theak ha
+        run: echo "Dock theak ha"
