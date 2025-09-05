@@ -9,9 +9,16 @@ on:
 
 jobs:
   terraformInit:
-    name: Terraform initwa
+    name: Terraform
     runs-on: dhondu-test
-
     steps:
-      - name: tare bah rocks par betha ha ya
-        run: echo "Dock theak ha"
+    - name: Checkout
+      uses:  actions/checkout@v5.0.0
+       
+       
+    - name: Install Terraform
+      uses: little-core-labs/install-terraform@v2.0.0   
+        e-core-labs/install-terraform@v2.0.0
+      with:
+         version: 1.13.0  
+          
