@@ -1,0 +1,17 @@
+name: "atique test pipeline"
+
+on:
+  push:
+    branches:
+      - 'features/**'
+      - 'main'
+      - 'hotfix/**'
+
+jobs:
+  terraformInit:
+    name: Terraform initwa
+    runs-on: dhondu-test
+
+    steps:
+      - name: tare bah rocks par betha ha ya
+        run: echo "Dock theak ha
