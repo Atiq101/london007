@@ -1,4 +1,4 @@
-name: Mera Pahll pipeline
+name: Mera Pahll pipeline123
 on:
   push:
     branches: 
@@ -6,8 +6,8 @@ on:
     - 'feature/**'
 jobs: 
  terraformInit: 
-   name: Initivaa 
+   name: Initivaa123
    runs-on:  dhondu-test
    steps: 
-      - name:  Dhondhu Rocks!
+      - name:  Dhondhu Rocks123!
         run: echo welcome welcome welcome 
