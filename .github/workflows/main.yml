@@ -1,4 +1,4 @@
-name: "atique Terrafrom Pipleline12345"
+name: "atique Terrafrom Pipleline123456"
 
 on: workflow_dispatch
 permissions:
