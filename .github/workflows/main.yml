@@ -7,7 +7,7 @@ permissions:
   
 jobs:
   terraformjob:
-    name: Terraform
+    name: Terraformjobtest
     runs-on: dhondu-test
     steps:
       - name: Checkout
