@@ -1,21 +1,18 @@
-name: "atique test pipeline"
+name: "atique Terrafrom Pipleline"
 
-on:
-  push:
-    branches:
-      - 'features/**'
-      - 'main'
-      - 'hotfix/**'
-
+on: workflow_dispatch
+  
 jobs:
-  terraformInit:
+  terraformjob:
     name: Terraform
     runs-on: dhondu-test
     steps:
       - name: Checkout
         uses: actions/checkout@v5.0.0
-       
+   
       - name: Install Terraform
         uses: little-core-labs/install-terraform@v2.0.0
         with:
           version: 1.9.7   # latest stable Terraform version
+          
+          
