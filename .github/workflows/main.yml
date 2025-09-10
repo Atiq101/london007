@@ -1,6 +1,9 @@
 name: "atique Terrafrom Pipleline12345"
 
 on: workflow_dispatch
+permissions:
+      id-token: write
+      contents: read
   
 jobs:
   terraformjob:
@@ -9,6 +12,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v5.0.0
+        
    
       - name: Azure Login
         uses: Azure/login@v2.3.0
