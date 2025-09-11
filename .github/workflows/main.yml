@@ -21,6 +21,7 @@ jobs:
           tenant-id:  8ec302d7-6eef-43fb-b5a5-ccc0236746fa
           subscription-id: 3142e9bb-dc6c-403c-9fcf-cbf1d0163394
 
+      
       - name: Terraform Init
         run: terraform init
       - name: Terraform Format
