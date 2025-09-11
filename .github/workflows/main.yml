@@ -1,32 +1,38 @@
-name: "atique Terrafrom Pipleline123456"
+name: "atique Terraform Pipeline123456"
 
-on: workflow_dispatch
+on:
+  workflow_dispatch:
+
 permissions:
-      id-token: write
-      contents: read
-  
+  id-token: write
+  contents: read
+
 jobs:
   terraformjob:
     name: Terraformjobtest
     runs-on: dhondu-test
+
     steps:
       - name: Checkout
         uses: actions/checkout@v5.0.0
-        
-   
+
       - name: Azure Login
-        uses: Azure/login@v2.3.0
+        uses: azure/login@v2.3.0
         with:
-          client-id:  2fa9b226-6a5d-4b8f-9dd4-9fe47ab5dc75
-          tenant-id:  8ec302d7-6eef-43fb-b5a5-ccc0236746fa
+          client-id: 2fa9b226-6a5d-4b8f-9dd4-9fe47ab5dc75
+          tenant-id: 8ec302d7-6eef-43fb-b5a5-ccc0236746fa
           subscription-id: 3142e9bb-dc6c-403c-9fcf-cbf1d0163394
 
-            - name: Terraform Init
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: 1.8.5   # adjust if needed
+
+      - name: Terraform Init
         run: terraform init
+
       - name: Terraform Format
         run: terraform fmt -check -recursive
 
-      # Terraform Plan
       - name: Terraform Plan
         run: terraform plan -input=false
-      
