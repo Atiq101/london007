@@ -19,9 +19,9 @@ jobs:
       - name: Azure Login
         uses: azure/login@v2.3.0
         with:
-          client-id: 2fa9b226-6a5d-4b8f-9dd4-9fe47ab5dc75
-          tenant-id: 8ec302d7-6eef-43fb-b5a5-ccc0236746fa
-          subscription-id: 3142e9bb-dc6c-403c-9fcf-cbf1d0163394
+          client-id: 966902af-9d41-4417-bf64-f2bd84aac8ca
+          tenant-id: 3f89de9e-413d-40f2-811c-4f1ab9c97340
+          subscription-id: aa50dcb0-04de-41e4-bb3e-260e54d18bec
 
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v3
@@ -30,6 +30,7 @@ jobs:
 
       - name: Terraform Init
         run: terraform init
+ 
 
       - name: Terraform Format
         run: terraform fmt -check -recursive
